@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Page</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #171717;
+            color: white;
+        }
+
+        #Service-page {
+            padding: 50px 0;
+            background-color: #171717;
+            width: 100vw;
+        }
+
+        .titles {
+            text-align: center;
+        }
+
+        .small-title-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .small-tit {
+            font-size: 1rem;
+            color: #caef45;
+        }
+
+        .main-tit {
+            font-size: 3rem;
+            color: whitesmoke;
+        }
+
+        .servicePage-container {
+            padding-top: 50px;
+        }
+
+        .card-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            justify-content: center;
+        }
+
+        .card {
+            background: #1f1f1f;
+            border-radius: 10px;
+            border: 0.5px solid grey;
+            max-width: 250px;
+            margin: 0 auto;
+            height: 300px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .service-icon {
+            width: 70px;
+            height: auto;
+        }
+
+        .service-title {
+            color: whitesmoke;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .detail {
+            color: lightgray;
+            font-size: 0.9rem;
+        }
+
+        .order-btn {
+            background-color: grey;
+            font-family: Arial, sans-serif;
+            color: #caef45;
+            padding: 10px;
+            width: 10vw;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Responsive Styles */
+        @media all and (max-width: 768px) {
+            .card-section {
+                grid-template-columns: 1fr;
+            }
+
+            .order-btn {
+                width: 34vw;
+            }
+        }
+
+        @media all and (max-width: 426px) {
+            .main-tit {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media all and (max-width: 320px) {
+            .main-tit {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Service Page -->
+<main id="Service-page">
+
+    <section class="titles">
+        <div class="small-title-section">
+            <span class="star">&#9733;</span>
+            <p class="small-tit">MY SERVICES</p>
+            <span class="star">&#9733;</span>
+        </div>
+        <p class="main-tit">My Specializations</p>
+    </section>
+
+    <main class="servicePage-container">
+        <section class="card-section">
+            <!-- Card 1 -->
+            <div class="card">
+                <img class="service-icon" src="assets/images/icons/web_development.png" alt="Web Development">
+                <p class="service-title">Web Development</p>
+                <p class="detail">We create responsive, user-friendly websites with beautiful designs tailored to your business needs.</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img class="service-icon" src="assets/images/icons/ui-design.png" alt="UI/UX Designs">
+                <p class="service-title">UI/UX Designs</p>
+                <p class="detail">Bring your ideas to life with our expert Figma services, creating designs that captivate and engage users.</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img class="service-icon" src="assets/images/icons/dekstop-application.png" alt="Desktop Applications">
+                <p class="service-title">Desktop Applications</p>
+                <p class="detail">We specialize in developing powerful, user-friendly desktop applications tailored to your business needs.</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+        </section>
+    </main>
+
+</main>
+
+</body>
+</html>

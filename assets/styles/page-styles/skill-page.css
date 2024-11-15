@@ -1,0 +1,240 @@
+#Skills-page{
+   /* background-color: #1f1f1f;*/
+
+    background-color: black;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+
+.titles{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-tit{
+    font-weight: bold;
+    font-family: Archivo;
+    font-size: 3.6rem;
+    color: white;
+}
+
+.small-title-section{
+    display: flex;
+    gap: 5px;
+}
+
+.small-tit{
+   color: #caef45;
+    font-weight: bold;
+    font-family: Archivo;
+}
+
+
+.icon-content{
+  /*  border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+
+}
+
+.logo-section{
+/*    border: 1px solid black;*/
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    padding-top: 20px;
+}
+
+
+.icon {
+    width: 50px;
+    height: auto;
+    padding: 4px;
+    background-color: lightgray;
+    border-radius: 11px;
+}
+
+.frame{
+    width: 198px;
+    height: auto;
+    padding: 10px;
+    background-color: #171717;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #c0ff7300;
+    overflow: hidden;
+}
+
+
+.skill-name{
+    font-family: Archivo;
+    font-weight: normal;
+    color:darkgray;
+    font-size: 1.1rem;
+
+}
+
+
+
+.skill-prcentage{
+    font-family: Archivo;
+    font-weight: bold;
+   color: #caef45;
+    font-size: 1.1rem;
+
+}
+
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 6vw;
+
+}
+
+
+.frame::before{
+    content: "";
+    position: absolute;
+    width: 193px;
+    height: 0.5px;
+    background-color: #caef45;
+    transform: translateY(-40px);
+    animation: anime 3s infinite;
+
+}
+
+.frame::after{
+    content: "";
+    position: absolute;
+    width: 193px;
+    height: 0.5px;
+    background-color: #caef45;
+    transform: translateY(40px);
+    animation: anime 3s infinite;
+}
+
+
+
+@keyframes anime {
+    0% {
+      width: 0;
+    }
+
+    50% {
+        width: 193px;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+
+#skill-for-tabMobile{
+    display: none;
+    width: 100vw;
+}
+
+.new-icon-sec{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Customize the scrollbar */
+body::-webkit-scrollbar {
+    width: 12px;  /* Change the width of the scrollbar */
+    height: 12px; /* Change the height of the horizontal scrollbar */
+}
+
+/* Customize the scrollbar track */
+body::-webkit-scrollbar-track {
+    background-color: #1f1f1f; /* Background color of the track */
+    border-radius: 10px;
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+body::-webkit-scrollbar-thumb {
+    background-color: #caef45; /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    border: 3px solid #171717; /* Optional: add a border around the thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #a7d118; /* Color when hovered */
+}
+
+
+@media all and (max-width: 1024px){
+    .logo-section{
+        gap: 26px;
+    }
+    .cont{
+        width: 11vw;
+    }
+}
+
+
+@media all and (max-width: 768px){
+
+    .icon-content{
+        display: none;
+    }
+
+    #skill-for-tabMobile{
+        display: flex ;
+        padding-top: 50px;
+    }
+
+    .cont {
+        width: 14vw;
+    }
+}
+
+
+@media all and (max-width:426px){
+
+    #skill-for-tabMobile{
+        display: block;
+        gap: 30px;
+
+    }
+
+    .cont {
+        width: 22vw;
+    }
+
+}
+
+
+
+@media all and (max-width:376px){
+
+    .cont {
+        width: 27vw;
+    }
+
+}
+
+
+
+@media all and (max-width:321px){
+
+    .cont {
+        width: 29vw;
+    }
+
+}

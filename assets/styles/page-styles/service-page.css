@@ -1,0 +1,142 @@
+#Service-page{
+    padding-top: 50px;
+    background-color: #171717;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+
+.servicePage-container{
+    padding-top: 50px;
+}
+
+
+.card-section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+     column-gap: 50px;
+}
+
+.service-icon{
+    width: 70px;
+    height: auto;
+}
+
+/*
+.card{
+   padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin:20px auto;
+    background: #1f1f1f;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 250px;
+    height: 300px;
+    border: 0.5px solid grey;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-title{
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: Archivo;
+    font-size: 1.3rem;
+}
+
+.detail{
+    color: lightgray;
+    font-weight: normal;
+    font-family: Archivo;
+    text-align: center;
+}
+
+.order-btn{
+    background-color: grey;
+    font-family: Archivo;
+    color: #caef45;
+    padding: 10px;
+    width: 10vw;
+    border-radius: 30px;
+    border: none;
+}
+*/
+
+.card {
+    background: #1f1f1f;
+    border-radius: 10px;
+    border: 0.5px solid grey;
+    max-width: 250px;
+    margin: 0 auto;
+    height: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.service-icon {
+    width: 70px;
+    height: auto;
+}
+
+.service-title {
+    color: whitesmoke;
+    font-family: Archivo;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.detail {
+    color: lightgray;
+    font-family: Archivo;
+    font-size: 0.9rem;
+}
+
+.order-btn {
+    background-color: grey;
+    font-family: Arial, sans-serif;
+    color: #caef45;
+    padding: 10px;
+    width: 10vw;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+
+@media all and (max-width: 768px) {
+    .card-section{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .order-btn{
+        padding: 10px;
+        width: 34vw;
+    }
+
+}
+
+@media all and (max-width: 426px){
+    .main-tit{
+        font-size: 2.5rem;
+    }
+}
+
+
+@media all and (max-width: 320px){
+    .main-tit{
+       text-align: center;
+    }
+}
