@@ -17,6 +17,14 @@
 
 }
 
+.star1{
+    padding-right: 10px;
+}
+
+.star2{
+    padding-left: 10px;
+}
+
 .logo{
    transform: scale(85%);
 }
@@ -109,9 +117,8 @@ margin: 0;
 .country{
     font-family: Archivo;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #caef45;
-
 }
 
 .name-intro{
@@ -172,6 +179,7 @@ margin: 0;
 
 .contact-container{
     display: flex;
+    align-items: center;
     gap: 10px;
 }
 
@@ -388,6 +396,24 @@ margin: 0;
     }
 }
 
+@media all and (max-width: 376px){
+
+    .details{
+        padding: 17px;
+    }
+    .role {
+        font-size: 2.2rem;
+    }
+
+    .contact-opt{
+        gap: 12px;
+    }
+
+    .count-project {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
 
 
 @media all and (max-width: 321px) {

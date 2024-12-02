@@ -1,0 +1,40 @@
+#section-container{
+    width: 100vw;
+ background-color: #171717;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.cont-p{
+    width: 70vw;
+    background-color: #caef45;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    border-radius: 50px;
+
+}
+
+.meeting-discuss{
+    color: black;
+    font-weight: bolder;
+    font-family: Archivo;
+    font-size: 3rem;
+}
+
+.meeting-discuss-btn{
+    width: 180px;
+    height: auto;
+    padding: 10px;
+    border-radius: 30px;
+    font-family: Archivo;
+    background-color:black;
+    color: white;
+    font-weight: bold;
+    border: none;
+   font-size: 1.2rem;
+}

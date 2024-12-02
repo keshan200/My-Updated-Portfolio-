@@ -1,10 +1,9 @@
 #Skills-page{
    /* background-color: #1f1f1f;*/
-
     background-color: black;
     width: 100vw;
     height: auto;
-    padding-bottom: 50px;
+    padding-bottom: 200px;
     padding-top: 50px;
 }
 
@@ -30,7 +29,7 @@
 }
 
 .small-tit{
-   color: #caef45;
+    color: #caef45;
     font-weight: bold;
     font-family: Archivo;
 }
@@ -89,7 +88,7 @@
 .skill-prcentage{
     font-family: Archivo;
     font-weight: bold;
-   color: #caef45;
+    color: #caef45;
     font-size: 1.1rem;
 
 }
@@ -109,6 +108,7 @@
     position: absolute;
     width: 193px;
     height: 0.5px;
+    border-radius: 30%;
     background-color: #caef45;
     transform: translateY(-40px);
     animation: anime 3s infinite;
@@ -119,6 +119,7 @@
     content: "";
     position: absolute;
     width: 193px;
+    border-radius: 30%;
     height: 0.5px;
     background-color: #caef45;
     transform: translateY(40px);
