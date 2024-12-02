@@ -413,6 +413,10 @@ margin: 0;
         padding-left: 10px;
         padding-right: 10px;
     }
+
+    .main-tit {
+        font-size: 2.3rem!important;
+    }
 }
 
 
