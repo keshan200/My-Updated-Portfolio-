@@ -198,6 +198,7 @@ body::-webkit-scrollbar-thumb:hover {
     #skill-for-tabMobile{
         display: flex ;
         padding-top: 50px;
+        flex-direction: row;
     }
 
     .cont {
@@ -209,13 +210,22 @@ body::-webkit-scrollbar-thumb:hover {
 @media all and (max-width:426px){
 
     #skill-for-tabMobile{
-        display: block;
+        display: flex;
+        flex-direction: row;
         gap: 30px;
 
     }
 
     .cont {
         width: 22vw;
+    }
+
+    .frame{
+        padding: 8px;
+        width: 159px;
+    }
+    .skill-name{
+        font-size: 1rem;
     }
 
 }
@@ -225,9 +235,20 @@ body::-webkit-scrollbar-thumb:hover {
 @media all and (max-width:376px){
 
     .cont {
-        width: 27vw;
+        width: 22vw;
     }
 
+    .frame{
+        width: 140px;
+    }
+
+    .skill-name {
+        font-size: 1rem;
+    }
+
+    .icon {
+        width: 40px;
+    }
 }
 
 
@@ -236,6 +257,14 @@ body::-webkit-scrollbar-thumb:hover {
 
     .cont {
         width: 29vw;
+    }
+    #skill-for-tabMobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .frame {
+        width: 174px;
     }
 
 }
