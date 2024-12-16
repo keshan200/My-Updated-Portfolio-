@@ -1,12 +1,29 @@
 #section-container{
     width: 100vw;
- background-color: #171717;
+    background-color: #171717;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 9999;
 }
 
+
+#Project-page{
+    padding-top: 50px;
+    background-color: #171717;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.title-sec{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 600px;
+    align-items: center;
+    padding-bottom: 100px;
+}
 .cont-p{
     width: 70vw;
     background-color: #caef45;
@@ -16,6 +33,7 @@
     align-items: center;
     gap: 150px;
     border-radius: 50px;
+    transform: translateY(-100px);
 
 }
 
@@ -38,3 +56,107 @@
     border: none;
    font-size: 1.2rem;
 }
+
+
+.project{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.line{
+    width: 100vw;
+    height: 1px;
+    background-color: white;
+
+
+
+}
+
+.Date{
+    font-size: 1.3rem;
+    font-weight: bolder;
+    font-family: Archivo;
+    color: #caef45;
+}
+
+.project-name{
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: Archivo;
+    color: white;
+}
+
+.use-skill{
+    font-size: 1.1rem;
+    font-weight: normal;
+    font-family: Archivo;
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.pcard-txt-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+
+.project-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 300px;
+}
+
+.project-img{
+    height: auto;
+    width: 265px;
+}
+
+.btn-showMore{
+    border: 2px solid white;
+    background-color: #caef45;
+    color: black;
+    font-weight: bolder;
+    font-family: Archivo;
+    padding: 10px;
+    border-radius: 30px;
+    width: 160px;
+}
+
+.project-cont{
+    border-top: 0.5px solid rgba(255, 255, 255, 0.5)
+;
+    width: 90vw;
+
+}
+
+/*
+.project-section::before{
+    content: "";
+    position: absolute;
+    width: 80vw;
+    height: 0.5px;
+    border-radius: 30%;
+    background-color: #caef45;
+    transform: translateY(-18px);
+
+}
+
+.project-section::after{
+    content: "";
+    position: absolute;
+    width: 80vw;
+    border-radius: 30%;
+    height: 0.5px;
+    background-color: #caef45;
+    transform: translateY(176px);
+
+}*/

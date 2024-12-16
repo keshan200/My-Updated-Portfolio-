@@ -1,0 +1,99 @@
+#contact-page{
+    background-color: black;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 200px;
+    padding-top: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-page-cont{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 90vw;
+
+}
+
+
+.form-cont{
+    background-color: #1f1f1f;
+}
+
+.para{
+    font-family: Archivo;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: white;
+    width: 48vw;
+}
+
+.social-media-cont{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+   /* width: 50vw;
+    justify-content: center;*/
+}
+
+.social-media{
+    height: auto;
+    width: 40px;
+}
+
+.sec1{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.contact-opt{
+    display: flex;
+}
+
+
+
+.form-cont{
+   padding: 30px;
+    width: 30vw;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.lbl{
+  font-family: Archivo;
+  font-size: 1rem;
+   color: white;
+}
+
+.txt-field{
+    width: 30vw;
+    height: 5vh;
+    border-radius: 10px;
+    background-color: darkgray;
+
+}
+
+.txt-area{
+    width: 30vw;
+    height: 20vh;
+    background-color: darkgray;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.filed-cont{
+    display: flex;
+    flex-direction: column;
+}
+

@@ -186,10 +186,14 @@ body::-webkit-scrollbar-thumb:hover {
     .cont{
         width: 11vw;
     }
+    .keshan{
+        width: 356px;
+    }
 }
 
 
 @media all and (max-width: 768px){
+/*@media (min-width: 641px) and (max-width: 768px) {*/
 
     .icon-content{
         display: none;
@@ -203,6 +207,10 @@ body::-webkit-scrollbar-thumb:hover {
 
     .cont {
         width: 14vw;
+    }
+
+    .keshan{
+        width: 287px;
     }
 }
 
