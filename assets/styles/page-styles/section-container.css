@@ -20,7 +20,7 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-    gap: 600px;
+    gap: 37.5em;
     align-items: center;
     padding-bottom: 100px;
 }
@@ -160,3 +160,83 @@
     transform: translateY(176px);
 
 }*/
+
+@media all and (max-width: 1024px) {
+    .meeting-discuss{
+        font-size: 2rem;
+    }
+    .title-sec{
+        gap: 7.5em;
+    }
+
+    .main-tit{
+        font-size: 3.5rem;
+    }
+
+}
+
+
+@media all and (max-width: 768px) {
+
+    .title-sec {
+        gap: 2em!important;
+    }
+
+
+    .main-tit {
+        font-size: 2.8rem;
+    }
+
+    .project-section{
+        gap: 76px;
+    }
+
+    .use-skill {
+        font-size: 1rem;
+    }
+
+    .cont-p{
+        gap: 33px;
+    }
+}
+
+
+@media all and (max-width: 426px) {
+
+
+    .project-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cont-p{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title-sec {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-tit {
+        font-size: 2.4rem;
+    }
+
+    }
+
+
+@media all and (max-width: 376px) {
+    .main-tit {
+        font-size: 2.1rem!important;
+    }
+
+    .cont-p{
+        padding: 28px;
+    }
+
+    .meeting-discuss {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}

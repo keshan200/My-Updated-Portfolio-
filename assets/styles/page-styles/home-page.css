@@ -1,22 +1,23 @@
-#Home-page{
-    background-color: black;
-    width: 100vw;
-    height: auto;
-    padding-bottom: 50px;
-}
-
 .header-container{
     width: 100vw;
     height: 11vh;
     display: flex;
     justify-content: space-evenly;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+
     color: black;
 
     position: fixed;
     z-index: 9999;
 
+}
+
+#Home-page{
+    background-color: black;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 50px;
 }
 
 .star1{

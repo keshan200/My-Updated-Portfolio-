@@ -3,164 +3,339 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Page</title>
+    <title>Live Chat Implementation</title>
     <style>
-        /* General Styles */
-        body {
+        /* Basic styling that matches your portfolio */
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #171717;
-            color: white;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        #Service-page {
-            padding: 50px 0;
-            background-color: #171717;
-            width: 100vw;
+        body {
+            background-color: #000;
+            color: #fff;
         }
 
-        .titles {
-            text-align: center;
+        /* Chat Widget Styling */
+        .chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            font-family: 'Segoe UI', sans-serif;
         }
 
-        .small-title-section {
+        .chat-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #c5ff4a;
+            color: #000;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
 
-        .small-tit {
-            font-size: 1rem;
-            color: #caef45;
+        .chat-button:hover {
+            transform: scale(1.05);
         }
 
-        .main-tit {
-            font-size: 3rem;
-            color: whitesmoke;
+        .chat-icon {
+            font-size: 24px;
         }
 
-        .servicePage-container {
-            padding-top: 50px;
-        }
-
-        .card-section {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 50px;
-            justify-content: center;
-        }
-
-        .card {
-            background: #1f1f1f;
+        .chat-window {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 450px;
+            background-color: #111;
             border-radius: 10px;
-            border: 0.5px solid grey;
-            max-width: 250px;
-            margin: 0 auto;
-            height: 300px;
-            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
             display: flex;
             flex-direction: column;
+            display: none;
+        }
+
+        .chat-header {
+            background-color: #c5ff4a;
+            color: #000;
+            padding: 15px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .minimize-btn {
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .chat-body {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background-color: #111;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 15px;
+            word-wrap: break-word;
+        }
+
+        .user-message {
+            background-color: #c5ff4a;
+            color: #000;
+            margin-left: auto;
+            border-radius: 15px 15px 0 15px;
+        }
+
+        .admin-message {
+            background-color: #333;
+            color: #fff;
+            margin-right: auto;
+            border-radius: 15px 15px 15px 0;
+        }
+
+        .chat-footer {
+            padding: 10px;
+            background-color: #111;
+            border-top: 1px solid #222;
+            display: flex;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            background-color: #222;
+            color: #fff;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        .send-btn {
+            background-color: #c5ff4a;
+            color: #000;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-left: 10px;
+            cursor: pointer;
+            display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
-            text-align: center;
         }
 
-        .service-icon {
-            width: 70px;
-            height: auto;
+        .send-btn:hover {
+            background-color: #b3ff2e;
         }
 
-        .service-title {
-            color: whitesmoke;
-            font-weight: bold;
-            font-size: 1.3rem;
+        /* Status indicator */
+        .status {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            margin-top: 5px;
+            color: #aaa;
         }
 
-        .detail {
-            color: lightgray;
-            font-size: 0.9rem;
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #4CAF50; /* Green for online */
+            margin-right: 5px;
         }
 
-        .order-btn {
-            background-color: grey;
-            font-family: Arial, sans-serif;
-            color: #caef45;
-            padding: 10px;
-            width: 10vw;
-            border-radius: 30px;
-            border: none;
-            cursor: pointer;
+        /* Simple animation for typing indicator */
+        .typing {
+            display: none;
+            font-style: italic;
+            color: #aaa;
+            margin-bottom: 10px;
         }
 
-        /* Responsive Styles */
-        @media all and (max-width: 768px) {
-            .card-section {
-                grid-template-columns: 1fr;
-            }
-
-            .order-btn {
-                width: 34vw;
-            }
+        .dot-flashing {
+            display: inline-block;
+            position: relative;
+            width: 6px;
+            height: 6px;
+            border-radius: 5px;
+            background-color: #aaa;
+            animation: dot-flashing 1s infinite linear alternate;
+            animation-delay: 0s;
+            margin: 0 2px;
         }
 
-        @media all and (max-width: 426px) {
-            .main-tit {
-                font-size: 2.5rem;
-            }
+        .dot-flashing:before, .dot-flashing:after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            width: 6px;
+            height: 6px;
+            border-radius: 5px;
+            background-color: #aaa;
+            animation: dot-flashing 1s infinite alternate;
         }
 
-        @media all and (max-width: 320px) {
-            .main-tit {
-                text-align: center;
-            }
+        .dot-flashing:before {
+            left: -12px;
+            animation-delay: 0s;
+        }
+
+        .dot-flashing:after {
+            left: 12px;
+            animation-delay: 1s;
+        }
+
+        @keyframes dot-flashing {
+            0% { background-color: #aaa; }
+            50%, 100% { background-color: #555; }
         }
     </style>
 </head>
 <body>
+<!-- Chat Widget -->
+<div class="chat-widget">
+    <div class="chat-button" id="chatButton">
+        <span class="chat-icon">💬</span>
+    </div>
 
-<!-- Service Page -->
-<main id="Service-page">
-
-    <section class="titles">
-        <div class="small-title-section">
-            <span class="star">&#9733;</span>
-            <p class="small-tit">MY SERVICES</p>
-            <span class="star">&#9733;</span>
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div>
+                <span>Chat with Me</span>
+                <div class="status">
+                    <span class="status-dot"></span>
+                    <span>Online</span>
+                </div>
+            </div>
+            <span class="minimize-btn" id="minimizeChat">−</span>
         </div>
-        <p class="main-tit">My Specializations</p>
-    </section>
 
-    <main class="servicePage-container">
-        <section class="card-section">
-            <!-- Card 1 -->
-            <div class="card">
-                <img class="service-icon" src="assets/images/icons/web_development.png" alt="Web Development">
-                <p class="service-title">Web Development</p>
-                <p class="detail">We create responsive, user-friendly websites with beautiful designs tailored to your business needs.</p>
-                <button class="order-btn">Order Now</button>
+        <div class="chat-body" id="chatBody">
+            <div class="message admin-message">
+                Hi there! 👋 How can I help you today?
             </div>
-
-            <!-- Card 2 -->
-            <div class="card">
-                <img class="service-icon" src="assets/images/icons/ui-design.png" alt="UI/UX Designs">
-                <p class="service-title">UI/UX Designs</p>
-                <p class="detail">Bring your ideas to life with our expert Figma services, creating designs that captivate and engage users.</p>
-                <button class="order-btn">Order Now</button>
+            <div class="typing" id="typingIndicator">
+                <span>Typing</span>
+                <span class="dot-flashing"></span>
             </div>
+        </div>
 
-            <!-- Card 3 -->
-            <div class="card">
-                <img class="service-icon" src="assets/images/icons/dekstop-application.png" alt="Desktop Applications">
-                <p class="service-title">Desktop Applications</p>
-                <p class="detail">We specialize in developing powerful, user-friendly desktop applications tailored to your business needs.</p>
-                <button class="order-btn">Order Now</button>
-            </div>
-        </section>
-    </main>
+        <div class="chat-footer">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Type your message...">
+            <button class="send-btn" id="sendButton">
+                ➤
+            </button>
+        </div>
+    </div>
+</div>
 
-</main>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // DOM Elements
+        const chatButton = document.getElementById('chatButton');
+        const chatWindow = document.getElementById('chatWindow');
+        const minimizeChat = document.getElementById('minimizeChat');
+        const chatInput = document.getElementById('chatInput');
+        const sendButton = document.getElementById('sendButton');
+        const chatBody = document.getElementById('chatBody');
+        const typingIndicator = document.getElementById('typingIndicator');
 
+        // Toggle chat window
+        chatButton.addEventListener('click', function() {
+            if (chatWindow.style.display === 'none' || chatWindow.style.display === '') {
+                chatWindow.style.display = 'flex';
+                chatInput.focus();
+            } else {
+                chatWindow.style.display = 'none';
+            }
+        });
+
+        // Minimize chat window
+        minimizeChat.addEventListener('click', function() {
+            chatWindow.style.display = 'none';
+        });
+
+        // Send message function
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (message === '') return;
+
+            // Create user message
+            addMessage(message, 'user');
+            chatInput.value = '';
+
+            // Show typing indicator
+            typingIndicator.style.display = 'block';
+            chatBody.scrollTop = chatBody.scrollHeight;
+
+            // Simulate response (in a real app, this would be handled by your backend)
+            setTimeout(function() {
+                typingIndicator.style.display = 'none';
+
+                // Examples of automated responses
+                const responses = [
+                    "Thanks for reaching out! I'll get back to you shortly.",
+                    "Great question! I'd be happy to discuss this further.",
+                    "Thank you for your message. I'll respond as soon as possible!",
+                    "I appreciate your interest. Let's schedule a time to talk in detail."
+                ];
+
+                const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                addMessage(randomResponse, 'admin');
+            }, 1500); // Simulate typing delay
+        }
+
+        // Add message to chat
+        function addMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message');
+            messageDiv.classList.add(sender + '-message');
+            messageDiv.textContent = text;
+
+            // Insert before typing indicator
+            chatBody.insertBefore(messageDiv, typingIndicator);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        // Send message on button click
+        sendButton.addEventListener('click', sendMessage);
+
+        // Send message on Enter key
+        chatInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // Focus input when chat window is opened
+        chatButton.addEventListener('click', function() {
+            setTimeout(() => {
+                if (chatWindow.style.display !== 'none') {
+                    chatInput.focus();
+                }
+            }, 100);
+        });
+    });
+
+  //  https://keshan200.github.io/My-Updated-Portfolio-/
+    //https://keshan200.github.io/My-Updated-Portfolio-/
+</script>
 </body>
 </html>

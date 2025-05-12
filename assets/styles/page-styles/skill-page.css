@@ -54,7 +54,7 @@
 
 
 .icon {
-    width: 50px;
+    width: 45px;
     height: auto;
     padding: 4px;
     background-color: lightgray;
@@ -64,7 +64,7 @@
 .frame{
     width: 198px;
     height: auto;
-    padding: 10px;
+    padding: 8px;
     background-color: #171717;
     border-radius: 15px;
     display: flex;
@@ -78,7 +78,8 @@
 .skill-name{
     font-family: Archivo;
     font-weight: normal;
-    color:darkgray;
+   /* color:darkgray;*/
+    color: #caef45;
     font-size: 1.1rem;
 
 }
@@ -103,7 +104,7 @@
 }
 
 
-.frame::before{
+/*.frame::before{
     content: "";
     position: absolute;
     width: 193px;
@@ -113,8 +114,9 @@
     transform: translateY(-40px);
     animation: anime 3s infinite;
 
-}
+}*/
 
+/*
 .frame::after{
     content: "";
     position: absolute;
@@ -125,6 +127,7 @@
     transform: translateY(40px);
     animation: anime 3s infinite;
 }
+*/
 
 
 
