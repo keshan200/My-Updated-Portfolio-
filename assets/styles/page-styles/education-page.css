@@ -184,6 +184,11 @@
 
     .education-timeline {
         max-width: 700px;
+
+    }
+
+    .education-timeline::before {
+        height: 125vh;
     }
 }
 
@@ -200,6 +205,7 @@
     .certificate-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+        max-width: 647px;
     }
 
     .education-timeline {
@@ -208,10 +214,11 @@
 
     .timeline-item {
         padding: 10px 20px;
+
     }
 
     .left {
-        left: -30px;
+        left: -42px;
     }
 
     .education-section {
@@ -225,16 +232,28 @@
     .certificates h2 {
         font-size: 28px;
     }
+    #school-edu{
+        width: 331px!important;
+    }
+
+    #sliit-edu{
+        width:300px
+    }
+
 }
 
 /* Mobile Large - 425px */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
     .education-timeline::before {
         left: 30px;
     }
 
+    .certificate-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .timeline-item {
-        width: 100%;
+        width: 82%;
         padding-left: 70px;
         padding-right: 15px;
         text-align: left;
@@ -263,6 +282,7 @@
 
     .certificate-grid {
         grid-template-columns: 1fr;
+        max-width: 330px;
     }
 
     .certificate-card {
@@ -281,10 +301,14 @@
     .certificate-card h3 {
         font-size: 18px;
     }
+
+
+
+
 }
 
 /* Mobile Medium - 375px */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
     .section-header h1 {
         font-size: 24px;
     }
@@ -294,7 +318,7 @@
     }
 
     .section-header p {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .timeline-item {
@@ -312,6 +336,13 @@
     .view-btn {
         padding: 6px 16px;
         font-size: 13px;
+    }
+    #school-edu {
+        width: 293px!important;
+    }
+
+    #sliit-edu {
+        width: 278px;
     }
 }
 
@@ -354,5 +385,17 @@
 
     .certificates h2 {
         font-size: 22px;
+    }
+
+    .certificate-grid{
+        max-width: 266px;
+    }
+
+    #sliit-edu {
+        width: 234px;
+    }
+
+    #school-edu {
+        width: 246px !important;
     }
 }
