@@ -366,6 +366,7 @@
 
     .education-timeline::before {
         left: 20px;
+       height:  112vh
     }
 
     .timeline-item::after {
