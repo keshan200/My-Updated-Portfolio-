@@ -31,12 +31,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lobster&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+
+    <!-- Include Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
 
         body{
             background-color: gray;
             overflow-x: hidden;
         }
+
+
 
     </style>
 
@@ -65,6 +70,7 @@
 <!--Home Page-->
 <main id="Home-page">
 
+
     <!--header-->
     <header class="header-container">
         <img class="logo" src="assets/images/icons/img.png">
@@ -81,10 +87,32 @@
             </ul>
         </nav>
 
+
+
         <div class="header-btn">
            <button id="btn-cv" class="btn-cv">My Resume</button>
            <button id="btn-connect">Les's Discuss</button>
         </div>
+
+
+
+        <!-- Menu Icon for Mobile/Tablet -->
+        <div id="menu-icon" class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+
+        <!-- Sidebar Navigation for Mobile/Tablet -->
+        <div id="sidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+            <a href="#">Home</a>
+            <a href="#">About Me</a>
+            <a href="#">Education</a>
+            <a href="#">Tools</a>
+            <a href="#">Projects</a>
+            <a href="#">Assignments</a>
+            <a href="#">Services</a>
+            <a href="#">Contact Me</a>
+        </div>
+
+
     </header>
 
     <!--page content-->
@@ -787,5 +815,6 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="./assets/script/sendEmail.js"></script>
+<script src="./assets/script/menu-icon.js"></script>
 </body>
 </html>
