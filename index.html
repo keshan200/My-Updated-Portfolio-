@@ -31,7 +31,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lobster&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-
     <style>
 
         body{
@@ -43,9 +42,18 @@
 
 
 
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "3Xbo1-UUMO4Mh68Vt",
+            });
+        })();
+    </script>
+
 </head>
-
-
 
 
 <!--green color - #caef45-->
@@ -678,30 +686,31 @@
 
         <!--2ND SECTION-->
         <section class="form-cont">
+
             <form class="form">
                 <div class="filed-cont">
                     <label class="lbl">Full Name :</label>
-                    <input class="txt-field" type="text" placeholder="Keshan Silva">
+                    <input id="name" class="txt-field" type="text" placeholder="Keshan Silva">
                 </div>
 
                 <div class="filed-cont">
                     <label  class="lbl">Email :</label>
-                    <input class="txt-field" type="email" placeholder="info123@gmail.com">
+                    <input id="email" class="txt-field" type="email" placeholder="info123@gmail.com">
                 </div>
 
-                <div class="filed-cont">
-                    <label  class="lbl">Phone :</label>
-                    <input class="txt-field" type="number" placeholder="+00 65611 16516 616">
-                </div>
+         <!--       <div class="filed-cont">
+                    <label  class="lbl">subject :</label>
+                    <input id="subject" class="txt-field" type="text" placeholder="+00 65611 16516 616">
+                </div>-->
 
                 <div class="filed-cont">
                     <label  class="lbl">Message :</label>
-                    <textarea class="txt-area" type="text" placeholder="Write Message......"></textarea>
+                    <textarea id="message" class="txt-area" type="text" placeholder="Write Message......"></textarea>
                 </div>
 
                 <!--send msg btn-->
                 <div>
-                    <button class="btn ">Send Message</button>
+                    <button type="button" onclick="sendEmail()" class="btn ">Send Message</button>
                 </div>
             </form>
 
@@ -775,6 +784,8 @@
 <script>
     AOS.init();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<script src="./assets/script/sendEmail.js"></script>
 </body>
 </html>
