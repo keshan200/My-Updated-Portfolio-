@@ -41,8 +41,6 @@
             overflow-x: hidden;
         }
 
-
-
     </style>
 
 
@@ -322,27 +320,85 @@
             <h2>Professional <span class="accent">Certifications</span></h2>
             <div class="certificate-grid">
                 <div class="certificate-card">
-                    <h3>Full Stack Web Development</h3>
-                    <div class="issuer">Udemy</div>
-                    <p>Comprehensive training in modern web development technologies including React, Node.js, and MongoDB.</p>
-                    <div class="date">Issued: March 2023</div>
-                    <a href="#" class="view-btn">View Certificate</a>
+                    <h3>AI/ML Engineer - stage 1</h3>
+                    <div class="issuer">SLIIT</div>
+                    <p>Fundamentals of artificial intelligence and machine learning, covering deep learning, Python, and practical applications using TensorFlow.</p>
+                    <div class="date">Issued: March 2024</div>
+                    <a href="#" class="view-btn" data-certificate="Ai">View Certificate</a>
                 </div>
 
+                <!--genAi :"assets/certificates/CertificateOfCompletion_What Is Generative AI 1.jpg",
+            neuralNetwork:"assets/certificates/Introduction to Neural Network.jpg",
+            introSql:"assets/certificates/Introduction to SQL.jpg",
+            intermeadietJava:"assets/certificates/Java Intermediate.jpg",
+            basicPython:"assets/certificates/Python_for_Beginners_E-Certificate.jpg",
+            intermeadietSql:"assets/certificates/SQL Intermediate.jpg",
+            introJava:"assets/certificates/Introduction to java.jpg"-->
+
                 <div class="certificate-card">
-                    <h3>AI and Machine Learning Fundamentals</h3>
-                    <div class="issuer">Coursera</div>
+                    <h3>Generative AI</h3>
+                    <div class="issuer">LinkdIn</div>
                     <p>Covered core concepts of AI, machine learning algorithms, and practical implementation using Python.</p>
-                    <div class="date">Issued: August 2022</div>
-                    <a href="#" class="view-btn">View Certificate</a>
+                    <div class="date">Issued: July 2024</div>
+                    <a href="#" class="view-btn" data-certificate="genAi">View Certificate</a>
                 </div>
 
                 <div class="certificate-card">
-                    <h3>AWS Cloud Practitioner</h3>
-                    <div class="issuer">Amazon Web Services</div>
-                    <p>Foundational knowledge of AWS cloud services, security, and architecture principles.</p>
-                    <div class="date">Issued: January 2023</div>
-                    <a href="#" class="view-btn">View Certificate</a>
+                    <h3>Introduction to Neural Network</h3>
+                    <div class="issuer">Great Learning</div>
+                    <p>Fundamentals of neural networks, covering architecture, learning algorithms, and practical applications in AI.</p>
+                    <div class="date">Issued: July 2024</div>
+                    <a href="#" class="view-btn" data-certificate="neuralNetwork">View Certificate</a>
+                </div>
+
+                <div class="certificate-card">
+                    <h3>Python for Beginners</h3>
+                    <div class="issuer">University of Moratuwa</div>
+                    <p>Introductory course on Python programming, covering essential concepts, syntax, and problem-solving techniques.</p>
+                    <div class="date">Issued: June 2024</div>
+                    <a href="#" class="view-btn" data-certificate="basicPython">View Certificate</a>
+                </div>
+
+                <div class="certificate-card">
+                    <h3>SQL Intermeadiet</h3>
+                    <div class="issuer">Solo Learn</div>
+                    <p>Intermediate-level course on SQL, focusing on advanced queries, data manipulation, and database management skills.</p>
+                    <div class="date">Issued: June 2024</div>
+                    <a href="#" class="view-btn" data-certificate="intermeadietSql">View Certificate</a>
+                </div>
+
+                <div class="certificate-card">
+                    <h3>Java Intermeadiet</h3>
+                    <div class="issuer">Solo Learn</div>
+                    <p>Intermediate-level course on Java programming, covering object-oriented concepts, data structures, and application development techniques.</p>
+                    <div class="date">Issued: June 2024</div>
+                    <a href="#" class="view-btn" data-certificate="intermeadietJava">View Certificate</a>
+                </div>
+
+                <div class="certificate-card">
+                    <h3>Introduction to SQL</h3>
+                    <div class="issuer">Solo Learn</div>
+                    <p>Comprehensive introduction to SQL, focusing on querying, data manipulation, and database management fundamentals for effective data handling</p>
+                    <div class="date">Issued: June 2024</div>
+                    <a href="#" class="view-btn" data-certificate="introSql">View Certificate</a>
+                </div>
+
+                <div class="certificate-card">
+                    <h3>Introduction to Java</h3>
+                    <div class="issuer">Solo Learn</div>
+                    <p>Fundamental course on Java programming, focusing on basic syntax, data types, and essential programming constructs.</p>
+                    <div class="date">Issued: June 2024</div>
+                    <a href="#" class="view-btn" data-certificate="introJava">View Certificate</a>
+                </div>
+
+            </div>
+            <button id="show-more-btn" class="show-more-btn">Show More</button>
+
+            <!-- Modal Template -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <img src="" alt="Certificate Preview" id="modal-img">
                 </div>
             </div>
         </div>
@@ -807,8 +863,6 @@
 
 <!--aos-->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
 <script>
     AOS.init();
 </script>
@@ -816,5 +870,8 @@
 
 <script src="./assets/script/sendEmail.js"></script>
 <script src="./assets/script/menu-icon.js"></script>
+<script src="./assets/script/certificate-show.js"></script>
+
+<script src="./assets/script/certificate-model.js"></script>
 </body>
 </html>
