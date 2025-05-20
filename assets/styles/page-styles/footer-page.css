@@ -3,8 +3,24 @@
     background-color:  #171717;
     width: 100vw;
     height: auto;
-    padding-bottom: 200px;
-    padding-top: 50px;
-
     border-top: 1px solid white;
+}
+
+
+.author{
+    background-color: #0F0F0F;
+    color: #caef45;
+    font-weight: bold;
+    font-family: "Arvo", serif;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.footer{
+
+    width: 100vw;
+    text-align: center;
+
 }
