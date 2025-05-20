@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--11:11-->
+    <meta charset="UTF-8">
+    <title>keshan</title>
+
+    <meta name="description" content="Welcome to my portfolio! I'm Keshan Silva, a passionate software engineer specializing in web development and AI/ML. Explore my projects and learn more about my skills and experience in creating innovative solutions tailored to meet business needs.">
+    <meta name="keywords" content="html, css, javaScript">
+    <meta name="author" content="Keshan Silva">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+
+
+    <link rel="stylesheet" href="assets/styles/page-styles/home-page.css">
+    <link rel="stylesheet" href="assets/styles/page-styles/about-me-page.css">
+    <link rel="stylesheet" href="assets/styles/page-styles/skill-page.css">
+    <link rel="stylesheet" href="assets/styles/page-styles/service-page.css">
+    <link rel="stylesheet" href="assets/styles/page-styles/section-container.css">
+    <link rel="stylesheet" href="assets/styles/page-styles/contact-page.css">
+    <link rel="stylesheet" href="assets/styles/page-styles/footer-page.css">
+    <link rel="stylesheet" href="assets/styles/page-styles/education-page.css">
+
+    <!--aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <!--navigation list font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lobster&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <!-- Include Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+
+        body{
+            background-color: gray;
+            overflow-x: hidden;
+        }
+
+        .hidden-projects {
+            display: none;
+        }
+
+        .project-link{
+            text-decoration: none;
+        }
+
+    </style>
+
+
+
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "3Xbo1-UUMO4Mh68Vt",
+            });
+        })();
+    </script>
+
+</head>
+
+
+<!--green color - #caef45-->
+
+
+<body>
+
+
+<!--Home Page-->
+<main id="Home-page">
+
+
+    <!--header-->
+    <header class="header-container">
+        <img class="logo" src="assets/images/icons/img.png">
+
+        <nav class="navigation">
+            <ul>
+                <li>Home</li>
+                <li>About-me</li>
+                <li>Education</li>
+                <li>Skills</li>
+                <li>Projects</li>
+                <li>Services</li>
+                <li>contact me</li>
+            </ul>
+        </nav>
+
+
+
+        <div class="header-btn">
+           <button id="btn-cv" class="btn-cv">My Resume</button>
+           <button id="btn-connect">Les's Discuss</button>
+        </div>
+
+
+
+        <!-- Menu Icon for Mobile/Tablet -->
+        <div id="menu-icon" class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+
+        <!-- Sidebar Navigation for Mobile/Tablet -->
+        <div id="sidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+            <a href="#">Home</a>
+            <a href="#">About Me</a>
+            <a href="#">Education</a>
+            <a href="#">Tools</a>
+            <a href="#">Projects</a>
+            <a href="#">Assignments</a>
+            <a href="#">Services</a>
+            <a href="#">Contact Me</a>
+        </div>
+
+
+    </header>
+
+    <!--page content-->
+    <main class="container">
+
+        <section class="homepage-content">
+               <!--name & position-->
+               <section class="details">
+                          <div data-aos="zoom-in" class="country"><span class="star1">&#9733;</span>FROM SRI LANKA,NEGOMBO<span  class="star2">&#9733;</span></div>
+                          <p data-aos="zoom-in" class="name-intro">Hi,This is</p>
+                          <p data-aos="zoom-in" class="name">Keshan...</p>
+                          <p data-aos="zoom-in" class="role">Software Engineer</p>
+
+                          <!--contact opt-->
+                          <section class="contact-opt">
+                                     <div data-aos="zoom-in" class="contact-container">
+                    <a class="icon-cont"><img class="home-icon" src="assets/images/icons/call.png"></a>
+                    <p class="dtl" id="mobile">Call Today:<br>+94774510743</p>
+                </div>
+                                     <div data-aos="zoom-in" class="contact-container">
+                    <a class="icon-cont"><img class="home-icon" src="assets/images/icons/mail.png"></a>
+                    <p class="dtl" id="mail">Email me:<br>sachinthakeshan175@gmail.com</p>
+                </div>
+                          </section>
+
+                          <a><button id="hire-me">Hire Me</button></a>
+                </section>
+
+               <!--my image-->
+               <section data-aos="zoom-in" class="img-sec">
+                     <img class="keshan" src="assets/images/png/my_photo.png">
+                </section>
+
+               <!--details-->
+               <section class="count-project">
+
+            <div data-aos="zoom-in">
+                <p class="count">1+ Year</p>
+                <p class="desc">years of Academic Experience</p>
+            </div>
+
+            <div data-aos="zoom-in">
+                <p class="count" >05</p>
+                <p class="desc">Project Completed on <br>My Acadamic </p>
+            </div>
+
+            <div data-aos="zoom-in">
+                <p  class="count">10+</p>
+                <p class="desc">Languages & Tools</p>
+            </div>
+
+        </section>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+        <!--tab mobile view-->
+        <section class="TabMobile">
+            <div class="tabMobileCOnt">
+                <!--name & position-->
+                <section class="details">
+                    <p class="country">From SriLanka,Negombo</p>
+                    <p class="name-intro">Hi,This is</p>
+                    <p class="name">Keshan...</p>
+                    <p class="role">Software Engineer</p>
+
+                    <!--contact opt-->
+                    <section class="contact-opt">
+                        <div class="contact-container">
+                            <a class="icon-cont"><img class="home-icon" src="assets/images/icons/call.png"></a>
+                            <p class="dtl" id="mobile1">Call Today:<br>+94774510743</p>
+                        </div>
+
+                        <div class="contact-container">
+                            <a class="icon-cont"><img class="home-icon" src="assets/images/icons/mail.png"></a>
+                            <p class="dtl" id="mail1">Email me:<br>sachinthakeshan175@gmail.com</p>
+                        </div>
+                    </section>
+
+                    <a><button id="hire-me1">Hire Me</button></a>
+                </section>
+
+                <!--my image-->
+                <section class="img-sec">
+                    <img class="keshan" src="assets/images/png/my_photo.png">
+                </section>
+            </div>
+
+            <!--details-->
+            <section class="count-project">
+
+                <div>
+                    <p class="count">2+ Yer</p>
+                    <p class="desc">years of Experience</p>
+                </div>
+
+                <div>
+                    <p class="count" >10 +</p>
+                    <p class="desc">Project Completed on <br>My Acadamic </p>
+                </div>
+
+                <div>
+                    <p  class="count">10+</p>
+                    <p class="desc">Languages & Tools</p>
+                </div>
+
+            </section>
+
+        </section>
+    </main>
+
+</main>
+
+
+<!--About Page-->
+<main id="About-page">
+
+    <main class="content">
+         <section  class="imgSec">
+         <img  data-aos="zoom-in-up"  class="myImg" src="assets/images/png/my_image_2.png">
+         </section>
+         <section data-aos="zoom-in-up" class="text-sec">
+        <div data-aos="zoom-in-up" id="first"><span class="star">&#9733;</span>MY STORY<span  class="star">&#9733;</span>
+
+        </div>
+        <div data-aos="zoom-in-up" id="sec">Passionate Developer Crafting Solutions for the Future</div>
+        <div data-aos="zoom-in-up" id="third">I am passionate about using technology to solve complex problems and make a positive impact on the world. So currently I am studying Software Engineering at IJSE-Institute of Software Engineering .As a creative problem solver and team player, I am committed to delivering high-quality work and exceeding expectations. I am eager to connect with other technology professionals and explore new opportunities for growth and development. I specialize in [AI, web development, etc.] and have hands-on experience with various technologies and programming languages. I’m always eager to collaborate with like-minded professionals and contribute to innovative projects. Let’s connect and explore new growth opportunities!</div>
+        <div data-aos="zoom-in-up" id="fourth"><button>Send Message</button></div>
+    </section>
+    </main>
+
+
+</main>
+
+
+<!--education section-->
+<main id="education-page" class="container">
+    <!-- Education Section -->
+    <section class="education-section">
+        <div class="section-header">
+            <span data-aos="zoom-in-up" class="accent">★ MY EDUCATION JOURNEY ★</span>
+            <h1 data-aos="zoom-in-up">Building a <span class="accent">Strong Foundation</span> for Technology Innovation</h1>
+            <p data-aos="zoom-in-up">My academic journey has equipped me with both theoretical knowledge and practical skills needed to excel in software development</p>
+        </div>
+
+        <div class="education-timeline">
+            <div data-aos="zoom-in-up" class="timeline-item left">
+                <div class="date">2023 - Present</div>
+                <h3>Higher National Diploma in Software Engineering</h3>
+                <p>IJSE - Institute of Software Engineering</p>
+                <!--<p>GPA: 3.8/4.0</p>-->
+                <div class="skills-container">
+                    <!--<span class="skill-tag">Object-Oriented Programming</span>
+                    <span class="skill-tag">Software Architecture</span>
+                    <span class="skill-tag">Database Systems</span>-->
+                </div>
+            </div>
+
+            <div data-aos="zoom-in-up" class="timeline-item right" id="sliit-edu">
+                <div class="date">2023 - present</div>
+                <h3>Certificate Course in AI/ML Engineering</h3>
+                <p>SLIIT - Sri lanka institute of information technology</p>
+               <!-- <p>GPA: 3.7/4.0</p>-->
+                <div class="skills-container">
+                   <!-- <span class="skill-tag">Web Development</span>
+                    <span class="skill-tag">Data Structures</span>
+                    <span class="skill-tag">Computer Networks</span>-->
+                </div>
+            </div>
+
+            <div data-aos="zoom-in-up" class="timeline-item left">
+                <div class="date">2024 - 1 mo</div>
+                <h3>Certificate Course in Spoken English</h3>
+                <p>TEB - The English bank</p>
+                <p>spoken english</p>
+                <div class="skills-container">
+                   <!-- <span class="skill-tag">Advanced Mathematics</span>
+                    <span class="skill-tag">Computer Fundamentals</span>
+                    <span class="skill-tag">Problem Solving</span>-->
+                </div>
+            </div>
+
+            <div data-aos="zoom-in-up" class="timeline-item right" id="school-edu">
+                <div class="date">2020 - 2022</div>
+                <h3>Higher school Education in Maths Sream</h3>
+                <p>Sri Sangabodhi National Collage ,SriLanka</p>
+                <p></p>
+                <div class="skills-container">
+                    <!-- <span class="skill-tag">Web Development</span>
+                     <span class="skill-tag">Data Structures</span>
+                     <span class="skill-tag">Computer Networks</span>-->
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="certificates">
+            <h2 data-aos="zoom-in-up">Professional <span class="accent">Certifications</span></h2>
+            <div class="certificate-grid">
+                <div data-aos="zoom-in-up" class="certificate-card">
+                    <h3>AI/ML Engineer - stage 1</h3>
+                    <div class="issuer">SLIIT</div>
+                    <p>Fundamentals of artificial intelligence and machine learning, covering deep learning, Python, and practical applications using TensorFlow.</p>
+                    <div class="date">Issued: March 2024</div>
+                    <a href="#" class="view-btn" data-certificate="Ai">View Certificate</a>
+                </div>
+
+                <!--genAi :"assets/certificates/CertificateOfCompletion_What Is Generative AI 1.jpg",
+            neuralNetwork:"assets/certificates/Introduction to Neural Network.jpg",
+            introSql:"assets/certificates/Introduction to SQL.jpg",
+            intermeadietJava:"assets/certificates/Java Intermediate.jpg",
+            basicPython:"assets/certificates/Python_for_Beginners_E-Certificate.jpg",
+            intermeadietSql:"assets/certificates/SQL Intermediate.jpg",
+            introJava:"assets/certificates/Introduction to java.jpg"-->
+
+                <div data-aos="zoom-in-up" class="certificate-card">
+                    <h3>Generative AI</h3>
+                    <div class="issuer">LinkdIn</div>
+                    <p>Covered core concepts of AI, machine learning algorithms, and practical implementation using Python.</p>
+                    <div class="date">Issued: July 2024</div>
+                    <a href="#" class="view-btn" data-certificate="genAi">View Certificate</a>
+                </div>
+
+                <div data-aos="zoom-in-up" class="certificate-card">
+                    <h3>Introduction to Neural Network</h3>
+                    <div class="issuer">Great Learning</div>
+                    <p>Fundamentals of neural networks, covering architecture, learning algorithms, and practical applications in AI.</p>
+                    <div class="date">Issued: July 2024</div>
+                    <a href="#" class="view-btn" data-certificate="neuralNetwork">View Certificate</a>
+                </div>
+
+                <div data-aos="zoom-in-up" class="certificate-card">
+                    <h3>Python for Beginners</h3>
+                    <div class="issuer">University of Moratuwa</div>
+                    <p>Introductory course on Python programming, covering essential concepts, syntax, and problem-solving techniques.</p>
+                    <div class="date">Issued: June 2024</div>
+                    <a href="#" class="view-btn" data-certificate="basicPython">View Certificate</a>
+                </div>
+
+                <div data-aos="zoom-in-up" class="certificate-card">
+                    <h3>SQL Intermeadiet</h3>
+                    <div class="issuer">Solo Learn</div>
+                    <p>Intermediate-level course on SQL, focusing on advanced queries, data manipulation, and database management skills.</p>
+                    <div class="date">Issued: June 2024</div>
+                    <a href="#" class="view-btn" data-certificate="intermeadietSql">View Certificate</a>
+                </div>
+
+                <div data-aos="zoom-in-up" class="certificate-card">
+                    <h3>Java Intermeadiet</h3>
+                    <div class="issuer">Solo Learn</div>
+                    <p>Intermediate-level course on Java programming, covering object-oriented concepts, data structures, and application development techniques.</p>
+                    <div class="date">Issued: June 2024</div>
+                    <a href="#" class="view-btn" data-certificate="intermeadietJava">View Certificate</a>
+                </div>
+
+                <div data-aos="zoom-in-up" class="certificate-card">
+                    <h3>Introduction to SQL</h3>
+                    <div class="issuer">Solo Learn</div>
+                    <p>Comprehensive introduction to SQL, focusing on querying, data manipulation, and database management fundamentals for effective data handling</p>
+                    <div class="date">Issued: June 2024</div>
+                    <a href="#" class="view-btn" data-certificate="introSql">View Certificate</a>
+                </div>
+
+                <div data-aos="zoom-in-up" class="certificate-card">
+                    <h3>Introduction to Java</h3>
+                    <div class="issuer">Solo Learn</div>
+                    <p>Fundamental course on Java programming, focusing on basic syntax, data types, and essential programming constructs.</p>
+                    <div class="date">Issued: June 2024</div>
+                    <a href="#" class="view-btn" data-certificate="introJava">View Certificate</a>
+                </div>
+
+            </div>
+            <button data-aos="zoom-in-up" id="show-more-btn" class="show-more-btn">Show More</button>
+
+            <!-- Modal Template -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <img src="" alt="Certificate Preview" id="modal-img">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<!--Service-Page-->
+<main id="Service-page">
+
+    <section class="titles">
+
+        <div data-aos="zoom-in-up" class="small-title-section">
+            <span class="star">&#9733;</span>
+            <p class="small-tit">MY SERVICES</p>
+            <span class="star">&#9733;</span>
+        </div>
+
+        <p data-aos="zoom-in-up" class="main-tit">My Specializations</p>
+    </section>
+
+    <main class="servicePage-container">
+
+        <section data-aos="zoom-in-up" class="card-section">
+
+            <div data-aos="zoom-in-up" class="card-container">
+                <div class="card">
+                    <img class="service-icon" src="assets/images/icons/web_development.png">
+                    <p class="service-title">Web Development</p>
+                    <p class="detail">We create responsive, user-friendly websites with beautiful designs tailored to your business needs.</p>
+
+                </div>
+            </div>
+
+
+            <div data-aos="zoom-in-up" class="card-container">
+                <div class="card">
+                    <img class="service-icon" src="assets/images/icons/ui-design.png">
+                    <p class="service-title">UI/UX Designs</p>
+                    <p class="detail">Bring your ideas to life with our expert Figma services, creating designs that captivate and engage users.</p>
+
+                </div>
+            </div>
+
+
+            <div data-aos="zoom-in-up" class="card-container">
+                <div class="card">
+                    <img class="service-icon" src="assets/images/icons/dekstop-application.png">
+                    <p class="service-title">Dekstop Applications Development</p>
+                    <p class="detail">We specialize in developing powerful, user-friendly desktop applications tailored to your business needs.</p>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+</main>
+
+
+<!--Skills-Page-->
+<main id="Skills-page">
+    <!--Title-->
+    <section class="titles">
+
+        <div data-aos="zoom-in-up" class="small-title-section">
+            <span class="star">&#9733;</span>
+            <p class="small-tit">MY SKILLS</p>
+            <span class="star">&#9733;</span>
+        </div>
+
+        <p data-aos="zoom-in-up" class="main-tit">My Advantages</p>
+    </section>
+
+     <main class="icon-content">
+
+         <section data-aos="zoom-in-up" class="logo-section">
+             <div data-aos="zoom-in-up" class="frame">
+                 <img class="icon" src="assets/images/icons/java.png">
+                 <div class="cont">
+                     <p class="skill-name">Java</p>
+                 </div>
+             </div>
+             <div data-aos="zoom-in-up" class="frame">
+                 <img class="icon" src="assets/images/icons/mysql.png">
+
+                <div class="cont">
+                    <p class="skill-name">Mysql</p>
+                </div>
+
+             </div>
+             <div data-aos="zoom-in-up" class="frame">
+                 <img class="icon" src="assets/images/icons/Linux.png">
+                 <div class="cont">
+                     <p class="skill-name">Linux</p>
+                 </div>
+             </div>
+         </section>
+
+         <section data-aos="zoom-in-up" class="logo-section">
+             <div data-aos="zoom-in-up" class="frame">
+                 <img class="icon" src="assets/images/icons/html.png">
+                 <div class="cont">
+                       <p class="skill-name">Html</p>
+                </div>
+             </div>
+             <div data-aos="zoom-in-up" class="frame">
+                 <img class="icon" src="assets/images/icons/css.png">
+                 <div class="cont">
+                     <p class="skill-name">Css</p>
+                 </div>
+             </div>
+             <div data-aos="zoom-in-up" class="frame">
+                 <img class="icon" src="assets/images/icons/java-script.png">
+                 <div class="cont">
+                     <p class="skill-name">Java-Script</p>
+                 </div>
+             </div>
+             <div data-aos="zoom-in-up" class="frame">
+                 <img class="icon" src="assets/images/icons/JQuery.png">
+                 <div class="cont">
+                     <p class="skill-name">JQuery</p>
+                 </div>
+             </div>
+         </section>
+
+         <section data-aos="zoom-in-up" class="logo-section">
+             <div data-aos="zoom-in-up" class="frame">
+                 <img class="icon" src="assets/images/icons/figma.png">
+                 <div class="cont">
+                     <p class="skill-name">Figma</p>
+                 </div>
+             </div>
+             <div data-aos="zoom-in-up" class="frame">
+                 <img class="icon" src="assets/images/icons/git.png">
+                 <div class="cont">
+                     <p class="skill-name">Git</p>
+                 </div>
+             </div>
+             <div data-aos="zoom-in-up" class="frame">
+                 <img class="icon" src="assets/images/icons/python.png">
+                 <div class="cont">
+                     <p class="skill-name">Python</p>
+                 </div>
+             </div>
+         </section>
+
+     </main>
+
+
+    <!--section for tabs & mobiles-->
+    <main id="skill-for-tabMobile">
+        <section class="new-icon-sec" id="new-icon-sec1">
+            <div class="frame">
+                <img class="icon" src="assets/images/icons/java.png">
+                <div class="cont">
+                   <!-- <p class="skill-prcentage">90%</p>-->
+                    <p class="skill-name">Java</p>
+                </div>
+            </div>
+            <div class="frame">
+                <img class="icon" src="assets/images/icons/mysql.png">
+
+                <div class="cont">
+                  <!--  <p class="skill-prcentage">90%</p>-->
+                    <p class="skill-name">Mysql</p>
+                </div>
+
+            </div>
+            <div class="frame">
+                <img class="icon" src="assets/images/icons/Linux.png">
+                <div class="cont">
+                    <!--<p class="skill-prcentage">90%</p>-->
+                    <p class="skill-name">Linux</p>
+                </div>
+            </div>
+            <div class="frame">
+                <img class="icon" src="assets/images/icons/html.png">
+                <div class="cont">
+                    <!--<p class="skill-prcentage">90%</p>-->
+                    <p class="skill-name">Html</p>
+                </div>
+            </div>
+            <div class="frame">
+                <img class="icon" src="assets/images/icons/git.png">
+                <div class="cont">
+                   <!-- <p class="skill-prcentage">90%</p>-->
+                    <p class="skill-name">Git</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="new-icon-sec" id="new-icon-sec2">
+            <div class="frame">
+                <img class="icon" src="assets/images/icons/css.png">
+                <div class="cont">
+                   <!-- <p class="skill-prcentage">90%</p>-->
+                    <p class="skill-name">Css</p>
+                </div>
+            </div>
+            <div class="frame">
+                <img class="icon" src="assets/images/icons/java-script.png">
+                <div class="cont">
+                    <!--<p class="skill-prcentage">90%</p>-->
+                    <p class="skill-name">Java-Script</p>
+                </div>
+            </div>
+            <div class="frame">
+                <img class="icon" src="assets/images/icons/JQuery.png">
+                <div class="cont">
+                   <!-- <p class="skill-prcentage">90%</p>-->
+                    <p class="skill-name">JQuery</p>
+                </div>
+            </div>
+            <div class="frame">
+                <img class="icon" src="assets/images/icons/figma.png">
+                <div class="cont">
+                    <!--<p class="skill-prcentage">90%</p>-->
+                    <p class="skill-name">Figma</p>
+                </div>
+            </div>
+            <div class="frame">
+                <img class="icon" src="assets/images/icons/python.png">
+                <div class="cont">
+                  <!--  <p class="skill-prcentage">90%</p>-->
+                    <p class="skill-name">Python</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</main>
+
+
+<!--Project-Page-->
+<main id="Project-page">
+    <section data-aos="zoom-in-up" id="section-container">
+        <div class="cont-p">
+            <p class="meeting-discuss">Book a Meeting to Discuss<br>Your Project With Me.</p>
+            <div>
+                <button class="meeting-discuss-btn">Let's Discuss</button>
+            </div>
+        </div>
+    </section>
+
+    <!--title-->
+    <section class="title-sec">
+        <div>
+        <div data-aos="zoom-in-up" class="small-title-section">
+            <span class="star">&#9733;</span>
+            <p class="small-tit">MY SKILLS</p>
+            <span class="star">&#9733;</span>
+        </div>
+        <p data-aos="zoom-in-up" class="main-tit">My Featured Projects</p>
+        </div>
+
+        <div>
+            <button data-aos="zoom-in-up" type="button" class="btn-showMore" id="btn-showMore">Show More..</button>
+        </div>
+    </section>
+
+
+    <!--projects-->
+    <main class="project">
+
+        <!--p1-->
+        <a class="project-link"><section data-aos="zoom-in-up" class="project-cont">
+
+               <section class="project-section">
+
+                   <div class="pcard-txt-cont">
+                       <p class="Date">2024</p>
+                       <p class="project-name">My Portfolio</p>
+                       <!--<p class="use-skill">javaFX  /  MySql /</p>-->
+                       <p class="use-skill">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci asperiores culpa deserunt dicta dignissimos eum ipsam iure iusto, necessitatibus nemo numquam odit officiis quo quos rem rerum soluta vel?</p>
+                   </div>
+
+                   <img class="project-img" src="assets/images/png/portfolio.png">
+               </section>
+
+        </section></a>
+
+        <!--p2-->
+        <a class="project-link" href="pages/culinary-reg-system.html"><section data-aos="zoom-in-up" class="project-cont">
+
+            <section class="project-section">
+
+                <div class="pcard-txt-cont">
+                    <p class="Date">2024</p>
+                    <p class="project-name">Culinary Academy Registration System</p>
+                    <p class="use-skill">A student enrollment management system built with JavaFX and Hibernate. Includes secure BCrypt password hashing, role-based access control, and input validation. Simplifies CRUD operations for students and programs while enhancing security and data integrity for administrators.</p>
+                </div>
+
+                <img class="project-img" src="assets/images/png/culinary-acadamy.png">
+            </section>
+
+        </section></a>
+
+
+        <!--p3-->
+        <a class="project-link" href="pages/shoppix-pos-system.html"> <section data-aos="zoom-in-up" class="project-cont">
+
+            <section class="project-section">
+
+                <div class="pcard-txt-cont">
+                    <p class="Date">2024</p>
+                    <p class="project-name">SHOPPIX -  Pos System</p>
+                    <p class="use-skill">A responsive Point of Sale (POS) system utilizing HTML, CSS, JavaScript, and Bootstrap. Features include inventory and sales management, interactive UI, dynamic tables, and mobile-friendly design, offering seamless compatibility across devices for efficient retail operations.</p>
+                </div>
+
+                <img class="project-img" src="assets/images/png/shoppix-pos-m.png">
+            </section>
+
+        </section></a>
+
+
+
+       <a class="project-link" href="pages/vip-travel-Layerd-details.html"><section class="project-cont hidden-projects">
+            <section class="project-section">
+                <div class="pcard-txt-cont">
+                    <p class="Date">2024</p>
+                    <p class="project-name">VIP TRAVEL-Management System -Layered Architecture</p>
+                    <p class="use-skill">The VIP Travel Management System is a robust and scalable application designed with a layered architecture to ensure separation of concerns and maintainability. This system streamlines operations for travel agencies by managing customer bookings, itineraries, payments, and travel packages. The presentation layer provides a user-friendly interface, while the business logic layer enforces rules and processes. The data access layer ensures secure and efficient interactions with the database. This architecture enhances flexibility, allowing easy integration of new features and long-term scalability.</p>
+                </div>
+                <img class="project-img" src="assets/images/png/LoginForm.png">
+            </section>
+        </section></a>
+
+
+        <a class="project-link" href="pages/vip-travel-details.html"><section  class="project-cont hidden-projects">
+            <section class="project-section">
+                <div class="pcard-txt-cont">
+                    <p class="Date">2024</p>
+                    <p class="project-name">VIP TRAVEL-Management System</p>
+                    <p class="use-skill">The VIP Travel Management System is a comprehensive solution designed to manage travel agency operations efficiently. This system enables users to handle client bookings, manage itineraries, and track payments seamlessly. Built with a focus on usability, it features a user-friendly interface, real-time data updates, and advanced reporting capabilities. Ideal for travel agencies looking to streamline their processes and enhance customer satisfaction.</p>
+                </div>
+                <img class="project-img" src="assets/images/png/LoginForm.png">
+            </section>
+        </section></a>
+
+
+    </main>
+</main>
+
+
+<!--Contact-me-Page-->
+<main  id="contact-page">
+
+    <main class="contact-page-cont">
+
+        <!--1ST SECTION-->
+        <section  class="sec1">
+
+            <!--title-->
+            <div data-aos="zoom-in-up">
+                <div class="small-title-section">
+                    <span class="star">&#9733;</span>
+                    <p class="small-tit">CONTACT ME</p>
+                    <span class="star">&#9733;</span>
+                </div>
+                <p data-aos="zoom-in-up" class="main-tit">Let's Start Your<br>Next Dream Project</p>
+            </div>
+
+            <!--para-->
+            <div>
+                <p data-aos="zoom-in-up" class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus esse itaque nulla officiis repellendus, vel! Ab, accusantium ea ex fugit harum inventore ipsa nobis officia quis repellat tempora unde, vero! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam amet aperiam aspernatur assumenda, dicta eius laborum officia perferendis quae quam quidem quo rem rerum sapiente suscipit tenetur,Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eum explicabo neque officiis perspiciatis quasi rem, tempore voluptatum. Aperiam cupiditate dolor eius fuga ipsa nam nobis obcaecati sint temporibus vel.</p>
+            </div>
+
+            <!--contact-->
+            <section data-aos="zoom-in-up" class="contact-opt">
+                <div class="contact-container">
+                    <a class="icon-cont"><img class="home-icon" src="assets/images/icons/call.png"></a>
+                    <p class="dtl mobile">Call Today:<br>+94774510743</p>
+                </div>
+                <div class="contact-container">
+                    <a class="icon-cont"><img class="home-icon" src="assets/images/icons/mail.png"></a>
+                    <p class="dtl mail">Email me:<br>sachinthakeshan175@gmail.com</p>
+                </div>
+            </section>
+
+            <!--contact2-->
+            <section data-aos="zoom-in-up" class="social-media-cont">
+                <a href="https://www.linkedin.com/in/keshan-silva-104b6a2a9/"><img class="social-media" src="assets/images/icons/linkIN.png" title="LinkedIn" alt="LinkedIn"></a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B94774510743&text&app_absent=0"><img class="social-media" src="assets/images/icons/whatsApp.png" title="WhatsAPP" alt="WhatsAPP"></a>
+                <a href="https://www.instagram.com/"><img class="social-media" src="assets/images/icons/insta.png" title="Instagram" alt="Instagram"></a>
+                <a href="mailto:sachinthakeshan175@gmail.com"><img class="social-media" src="assets/images/icons/Mail2.png" title="Mail" alt="Mail"></a>
+            </section>
+
+
+        </section>
+
+        <!--2ND SECTION-->
+        <section data-aos="zoom-in-up" class="form-cont">
+
+            <form class="form">
+                <div class="filed-cont">
+                    <label class="lbl">Full Name :</label>
+                    <input id="name" class="txt-field" type="text" placeholder="Keshan Silva">
+                </div>
+
+                <div class="filed-cont">
+                    <label  class="lbl">Email :</label>
+                    <input id="email" class="txt-field" type="email" placeholder="info123@gmail.com">
+                </div>
+
+         <!--       <div class="filed-cont">
+                    <label  class="lbl">subject :</label>
+                    <input id="subject" class="txt-field" type="text" placeholder="+00 65611 16516 616">
+                </div>-->
+
+                <div class="filed-cont">
+                    <label  class="lbl">Message :</label>
+                    <textarea id="message" class="txt-area" type="text" placeholder="Write Message......"></textarea>
+                </div>
+
+                <!--send msg btn-->
+                <div>
+                    <button type="button" onclick="sendEmail()" class="btn ">Send Message</button>
+                </div>
+            </form>
+
+
+        </section>
+
+    </main>
+
+</main>
+
+
+
+<!--footer-->
+<!--<main id="footer">
+
+<footer class="page-footer">
+
+    <section class="footer-sec1">
+
+        <div class="footer-logo">
+            <img class="logo" src="assets/images/icons/shoppix-pos.png">
+        </div>
+
+        <div>
+            <p class="footer-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi autem, doloribus ea eos facilis fugit illum libero nobis soluta veniam. Deserunt dolore enim error fugiat laboriosam nemo, officiis quas voluptatem.</p>
+        </div>
+
+        <div class="social-media-footer">
+
+            <div class="footer-socialMedia-cont">
+                <img src="assets/images/icons/whatsAppWhite.png" alt="whatsApp">
+            </div>
+
+            <div class="footer-socialMedia-cont">
+                <img src="assets/images/icons/linkdinWhite.png" alt="linkDin">
+            </div>
+
+            <div class="footer-socialMedia-cont">
+                <img src="assets/images/icons/intaWhite.png" alt="instergram">
+            </div>
+
+            <div class="footer-socialMedia-cont">
+                <img src="assets/images/icons/mailWhite.png" alt="mail">
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <section class="footer-sec2">
+        <div></div>
+
+        <div></div>
+    </section>
+
+</footer>
+
+    <footer>
+
+    </footer>
+
+</main>-->
+
+
+
+<!--aos-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="./assets/script/sendEmail.js"></script>
+<script src="./assets/script/menu-icon.js"></script>
+<script src="./assets/script/certificate-show.js"></script>
+
+<script>
+    // Get references to the Show More button and hidden projects
+    const showMoreButton = document.getElementById('btn-showMore');
+    const hiddenProjects = document.querySelectorAll('.hidden-projects');
+
+    // Add event listener for Show More button
+    showMoreButton.addEventListener('click', () => {
+        hiddenProjects.forEach(project => {
+            project.style.display = 'block'; // Show the hidden projects
+        });
+        showMoreButton.style.display = 'none'; // Hide the Show More button
+    });
+</script>
+<script src="./assets/script/certificate-model.js"></script>
+</body>
+</html>
