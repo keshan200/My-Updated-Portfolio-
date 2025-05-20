@@ -118,6 +118,7 @@
 .project-img{
     height: auto;
     width: 265px;
+    border-radius: 20px;
 }
 
 .btn-showMore{

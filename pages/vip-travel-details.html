@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Details - Developer Portfolio</title>
+
+    <link rel="stylesheet" href="/assets/styles/page-styles/home-page.css">
+
+    <!--navigation list font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lobster&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <style>
         /* Global Styles */
         * {
@@ -35,11 +43,7 @@
             z-index: 100;
         }
 
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+
 
         .logo {
             display: flex;
@@ -78,10 +82,6 @@
             color: #d2ff67;
         }
 
-        .nav-buttons {
-            display: flex;
-            gap: 15px;
-        }
 
         .btn {
             padding: 10px 20px;
@@ -108,14 +108,7 @@
             box-shadow: 0 5px 15px rgba(210, 255, 103, 0.3);
         }
 
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 30px;
-            height: 20px;
-            cursor: pointer;
-        }
+
 
         .hamburger span {
             width: 100%;
@@ -178,7 +171,7 @@
         .project-banner img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: scale-down;
             object-position: center;
         }
 
@@ -293,9 +286,6 @@
             background-color: rgba(210, 255, 103, 0.2);
         }
 
-        .related-projects {
-            margin-bottom: 80px;
-        }
 
         .related-projects h2 {
             font-size: 32px;
@@ -304,26 +294,7 @@
             color: #d2ff67;
         }
 
-        .related-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
 
-        .related-item {
-            background-color: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        .related-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .related-image {
-            height: 200px;
-        }
 
         .related-image img {
             width: 100%;
@@ -331,9 +302,7 @@
             object-fit: cover;
         }
 
-        .related-info {
-            padding: 20px;
-        }
+
 
         .related-info h3 {
             font-size: 20px;
@@ -428,8 +397,7 @@
 
         /* Responsive Styles */
         @media (max-width: 1024px) {
-            .gallery-grid,
-            .related-grid {
+            .gallery-grid{
                 grid-template-columns: repeat(2, 1fr);
             }
 
@@ -443,13 +411,6 @@
                 display: none;
             }
 
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-buttons {
-                display: none;
-            }
 
             .project-content {
                 grid-template-columns: 1fr;
@@ -471,8 +432,7 @@
         }
 
         @media (max-width: 425px) {
-            .gallery-grid,
-            .related-grid {
+            .gallery-grid{
                 grid-template-columns: 1fr;
             }
 
@@ -562,56 +522,25 @@
 </head>
 <body>
 <!-- Header -->
-<header>
-    <div class="container">
-        <div class="nav-wrapper">
-            <div class="logo">
-                <div class="logo-circle">K</div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About-me</a></li>
-                    <li><a href="#">Education</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact me</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-            <div class="nav-buttons">
-                <a href="#" class="btn btn-primary">My Resume</a>
-                <a href="#" class="btn btn-outline">Let's Discuss</a>
-            </div>
-        </div>
-    </div>
-</header>
+<!--header-->
+
 
 <!-- Project Header -->
 <section class="project-header">
-    <div class="container">
-        <h1>AI-Powered Smart Healthcare Platform</h1>
+    <div class="container" style="display: flex;flex-direction: column;margin-top: 80px">
+        <h1>VIP_TRAVEL Management System</h1>
         <div class="project-meta">
             <div class="meta-item">
                 <span class="meta-label">Project Type</span>
-                <span class="meta-value">Web Application</span>
+                <span class="meta-value">Desktop Application</span>
             </div>
             <div class="meta-item">
                 <span class="meta-label">Timeline</span>
-                <span class="meta-value">3 Months</span>
+                <span class="meta-value">1 Months</span>
             </div>
             <div class="meta-item">
                 <span class="meta-label">Role</span>
-                <span class="meta-value">Lead Developer</span>
-            </div>
-            <div class="meta-item">
-                <span class="meta-label">Client</span>
-                <span class="meta-value">MedTech Solutions</span>
+                <span class="meta-value">Fullstack Developer</span>
             </div>
         </div>
         <div class="project-links">
@@ -624,12 +553,12 @@
 <!-- Project Banner -->
 <div class="container">
     <div class="project-banner">
-        <img src="/api/placeholder/1200/400" alt="AI Healthcare Platform Banner">
+        <img src="../assets/images/png/LoginForm.png" alt="AI Healthcare Platform Banner">
     </div>
 </div>
 
 <!-- Project Content -->
-<div class="container">
+<!--<div class="container">
     <div class="project-content">
         <div class="project-description">
             <h2>Project Overview</h2>
@@ -654,7 +583,36 @@
             </ul>
         </div>
     </div>
+</div>-->
+
+<div class="container">
+    <div class="project-content">
+        <!-- Project Overview -->
+        <div class="project-description">
+            <h2>Project Overview</h2>
+            <p>The <strong>VIP-Travel Management System</strong> is a JavaFX-based desktop application designed to revolutionize the car rental experience in Sri Lanka. This system efficiently manages critical business operations, including customer management, user accounts, vehicle inventory, and rental bookings. Additionally, it features integrated reporting capabilities using Jasper Reports for generating detailed invoices and operational reports.</p>
+            <p>As the developer, I was responsible for designing and implementing the system's architecture, creating an intuitive user interface with JavaFX and Scene Builder, and ensuring seamless integration with the database. The project was carried out as part of my coursework at the <strong>Institute of Software Engineering (IJSE)</strong>.</p>
+            <p>The system addresses common challenges faced by car rental services, such as efficient resource allocation, accurate billing, and data-driven decision-making, providing a modern solution for enhancing operational efficiency.</p>
+        </div>
+
+        <!-- Key Features -->
+        <div class="project-features">
+            <h3>Key Features</h3>
+            <ul class="features-list">
+                <li>Comprehensive customer, user, and vehicle management</li>
+                <li>Booking system with status tracking and conflict resolution</li>
+                <li>Integration with Jasper Reports for detailed invoice and report generation</li>
+                <li>Secure user authentication and role-based access control</li>
+                <li>Database management using MySQL/PostgreSQL</li>
+                <li>Responsive and user-friendly desktop interface built with JavaFX</li>
+                <li>Dependency management and build automation using Maven</li>
+                <li>Scalable design for future feature enhancements</li>
+            </ul>
+        </div>
+    </div>
 </div>
+
+
 
 <!-- Project Gallery -->
 <div class="container">
@@ -683,65 +641,31 @@
     </div>
 </div>
 
+
+<!--   <li><strong>Programming Language:</strong> Java (OOP)</li>
+                <li><strong>Framework & UI:</strong> JavaFX, Scene Builder</li>
+                <li><strong>Database:</strong> MySQL/PostgreSQL</li>
+                <li><strong>Dependency Management:</strong> Maven</li>
+                <li><strong>Reporting:</strong> Jasper Reports</li>
+                <li><strong>Version Control:</strong> Git/GitHub</li>-->
+
 <!-- Tech Stack -->
 <div class="container">
     <div class="tech-stack">
         <h2>Technologies Used</h2>
         <div class="tech-grid">
-            <div class="tech-item">React.js</div>
-            <div class="tech-item">Node.js</div>
-            <div class="tech-item">Express</div>
-            <div class="tech-item">MongoDB</div>
-            <div class="tech-item">TensorFlow.js</div>
-            <div class="tech-item">Socket.io</div>
-            <div class="tech-item">Redux</div>
-            <div class="tech-item">JWT Authentication</div>
-            <div class="tech-item">AWS Services</div>
-            <div class="tech-item">Tailwind CSS</div>
-            <div class="tech-item">Chart.js</div>
-            <div class="tech-item">RESTful APIs</div>
+            <div class="tech-item">Java (OOP)</div>
+            <div class="tech-item">JavaFX, Scene Builder</div>
+            <div class="tech-item">MySQL</div>
+            <div class="tech-item">Maven</div>
+            <div class="tech-item">Jasper Reports</div>
+            <div class="tech-item">GitHub</div>
+
         </div>
     </div>
 </div>
 
-<!-- Related Projects -->
-<div class="container">
-    <div class="related-projects">
-        <h2>Related Projects</h2>
-        <div class="related-grid">
-            <div class="related-item">
-                <div class="related-image">
-                    <img src="/api/placeholder/400/200" alt="E-commerce Platform">
-                </div>
-                <div class="related-info">
-                    <h3>E-commerce Platform</h3>
-                    <p>A full-stack e-commerce solution with advanced product filtering and secure payment processing.</p>
-                    <a href="#" class="btn btn-primary">View Project</a>
-                </div>
-            </div>
-            <div class="related-item">
-                <div class="related-image">
-                    <img src="/api/placeholder/400/200" alt="Real Estate Application">
-                </div>
-                <div class="related-info">
-                    <h3>Real Estate Application</h3>
-                    <p>A property listing platform with interactive maps and virtual tour capabilities.</p>
-                    <a href="#" class="btn btn-primary">View Project</a>
-                </div>
-            </div>
-            <div class="related-item">
-                <div class="related-image">
-                    <img src="/api/placeholder/400/200" alt="Task Management System">
-                </div>
-                <div class="related-info">
-                    <h3>Task Management System</h3>
-                    <p>A collaborative task management system with real-time updates and team analytics.</p>
-                    <a href="#" class="btn btn-primary">View Project</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <!-- CTA Section -->
 <div class="container">
@@ -752,40 +676,7 @@
     </div>
 </div>
 
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <div class="logo-circle">K</div>
-            </div>
-            <div class="footer-links">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Projects</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
-            </div>
-            <div class="social-links">
-                <a href="#" class="social-link">
-                    <!-- GitHub icon would go here -->
-                    G
-                </a>
-                <a href="#" class="social-link">
-                    <!-- LinkedIn icon would go here -->
-                    L
-                </a>
-                <a href="#" class="social-link">
-                    <!-- Twitter/X icon would go here -->
-                    T
-                </a>
-            </div>
-        </div>
-        <div class="copyright">
-            © 2025 Developer Portfolio. All rights reserved.
-        </div>
-    </div>
-</footer>
+
 
 <script>
     // Mobile navigation toggle
