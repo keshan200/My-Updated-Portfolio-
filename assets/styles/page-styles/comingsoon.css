@@ -1,0 +1,18 @@
+.swal-popup {
+    background: linear-gradient(135deg, #c3ecb2, #f7c9d1);
+    border-radius: 15px;
+}
+
+.swal-title {
+    color: #4CAF50;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+}
+
+.swal-confirm-button {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+}
