@@ -24,6 +24,10 @@
     padding-right: 10px;
 }
 
+.menu-icon{
+    display: none;
+}
+
 .star2{
     padding-left: 10px;
 }
@@ -256,9 +260,9 @@ margin: 0;
     z-index: 1;
     top: 0;
     right: 0;
-    /* background-color: #0F0F0F;*/
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(800px);
+     background-color: #0F0F0F;
+/*    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(800px);*/
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -368,6 +372,8 @@ margin: 0;
         display: none;
     }
 
+
+
     .TabMobile{
         display:block!important;
         display: flex;
@@ -397,19 +403,23 @@ margin: 0;
     .count{
         font-size: 2.5rem;
     }
+
+
     .menu-icon {
-        display: block ;
+        display: block flex!important; ;
         color: #caef45;
         font-size: 40px;
         cursor: pointer;
+        justify-content: center;
+        align-items: center;
     }
 
-    #menu-icon{
+  /*  #menu-icon{
         display: flex;
         justify-content: center;
         align-items: center;
         padding-right: 30px;
-    }
+    }*/
 }
 
 

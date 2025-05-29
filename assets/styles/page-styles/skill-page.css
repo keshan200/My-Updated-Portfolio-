@@ -223,7 +223,7 @@ body::-webkit-scrollbar-thumb:hover {
     #skill-for-tabMobile{
         display: flex;
         flex-direction: row;
-        gap: 30px;
+
 
     }
 
@@ -272,6 +272,7 @@ body::-webkit-scrollbar-thumb:hover {
     #skill-for-tabMobile {
         display: flex;
         flex-direction: column;
+        gap: 23px;
     }
 
     .frame {

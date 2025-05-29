@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/styles/page-styles/contact-page.css">
     <link rel="stylesheet" href="assets/styles/page-styles/footer-page.css">
     <link rel="stylesheet" href="assets/styles/page-styles/education-page.css">
+    <link rel="stylesheet" href="assets/styles/page-styles/comingsoon.css">
 
 
 
@@ -51,6 +52,10 @@
             text-decoration: none;
         }
 
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
     </style>
 
@@ -90,39 +95,40 @@
 
         <nav class="navigation">
             <ul>
-                <li>Home</li>
-                <li>About-me</li>
-                <li>Education</li>
-                <li>Skills</li>
-                <li>Projects</li>
-                <li>Services</li>
-                <li>contact me</li>
+                <a href="#Home-page"><li>Home</li></a>
+                <a href="#About-page"><li>About-me</li></a>
+                <a href="#education-page"><li>Education</li></a>
+                <a href="#Skills-page"><li>Skills</li></a>
+                <a href="#Project-page"><li>Projects</li></a>
+                <a href="#Service-page"><li>Services</li></a>
+                <a href="#contact-page"><li>contact me</li></a>
             </ul>
         </nav>
 
 
 
         <div class="header-btn">
-           <button id="btn-cv" class="btn-cv">My Resume</button>
+           <button id="btn-cv" class="btn-cv comingSoon">My Resume</button>
            <button id="btn-connect">Les's Discuss</button>
         </div>
 
 
 
         <!-- Menu Icon for Mobile/Tablet -->
-        <div id="menu-icon" class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+        <div style="display: none" id="menu-icon" class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
 
         <!-- Sidebar Navigation for Mobile/Tablet -->
         <div id="sidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
-            <a href="#">Home</a>
-            <a href="#">About Me</a>
-            <a href="#">Education</a>
-            <a href="#">Tools</a>
-            <a href="#">Projects</a>
-            <a href="#">Assignments</a>
-            <a href="#">Services</a>
-            <a href="#">Contact Me</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()" style="margin-bottom: 20px; color: #caef45; font-size: 24px;">❌</a>
+
+            <a href="#Home-page">Home</a>
+            <a href="#About-page">About Me</a>
+            <a href="#education-page">Education</a>
+            <a href="#Skills-page">Tools</a>
+            <a href="#Project-page">Projects</a>
+            <a href="#Service-page">Services</a>
+            <a href="#contact-page">Contact Me</a>
+
         </div>
 
 
@@ -262,7 +268,7 @@
         </div>
         <div data-aos="zoom-in-up" id="sec">Passionate Developer Crafting Solutions for the Future</div>
         <div data-aos="zoom-in-up" id="third">I am passionate about using technology to solve complex problems and make a positive impact on the world. So currently I am studying Software Engineering at IJSE-Institute of Software Engineering .As a creative problem solver and team player, I am committed to delivering high-quality work and exceeding expectations. I am eager to connect with other technology professionals and explore new opportunities for growth and development. I specialize in [AI, web development, etc.] and have hands-on experience with various technologies and programming languages. I’m always eager to collaborate with like-minded professionals and contribute to innovative projects. Let’s connect and explore new growth opportunities!</div>
-        <div data-aos="zoom-in-up" id="fourth" onclick="showAlert()"><button>Send Message</button></div>
+        <div data-aos="zoom-in-up" id="fourth" class="comingSoon"><button>Send Message</button></div>
     </section>
     </main>
 
@@ -875,21 +881,20 @@
 <script src="./assets/script/sendEmail.js"></script>
 <script src="./assets/script/menu-icon.js"></script>
 <script src="./assets/script/certificate-show.js"></script>
-
 <script>
-    // Get references to the Show More button and hidden projects
     const showMoreButton = document.getElementById('btn-showMore');
     const hiddenProjects = document.querySelectorAll('.hidden-projects');
 
-    // Add event listener for Show More button
+
     showMoreButton.addEventListener('click', () => {
         hiddenProjects.forEach(project => {
-            project.style.display = 'block'; // Show the hidden projects
+            project.style.display = 'block';
         });
-        showMoreButton.style.display = 'none'; // Hide the Show More button
+        showMoreButton.style.display = 'none';
     });
 </script>
 <script src="./assets/script/certificate-model.js"></script>
+<script src="./assets/script/comingsoon.js"></script>
 
 
 
